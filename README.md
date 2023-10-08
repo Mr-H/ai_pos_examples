@@ -37,9 +37,24 @@ Then output looks like this
 
 pip install pandas
 pip install numpy
-pip install sklearn
+pip install scikit-learn
+
+Source: https://dataaspirant.com/gaussian-naive-bayes-classifier-implementation-python/
 
 ```
+# Required Python Machine learning Packages
+import pandas as pd
+import numpy as np
+# For preprocessing the data
+from sklearn.preprocessing import Imputer
+from sklearn import preprocessing
+# To split the dataset into train and test datasets
+from sklearn.cross_validation import train_test_split
+# To model the Gaussian Navie Bayes classifier
+from sklearn.naive_bayes import GaussianNB
+# To calculate the accuracy score of the model
+from sklearn.metrics import accuracy_score
+
 ```
 
 
