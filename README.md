@@ -33,5 +33,16 @@ print(tagged)
 Then output looks like this 
 [('Today', 'NN'), ('morning', 'NN'), (',', ','), ('Arthur', 'NNP'), ('felt', 'VBD'), ('very', 'RB'), ('good', 'JJ'), ('.', '.')]
 
+## Gaussian Naive Bayes Example 
+
+pip install pandas
+pip install numpy
+pip install sklearn
+
+```
+```
+
+
+
 
 
