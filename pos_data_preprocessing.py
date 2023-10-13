@@ -24,14 +24,24 @@ print("Tokens:", tokens)
 print("Extracting features from tokens...")
 features = []
 vec = DictVectorizer(sparse=False)
-sample = [{'height': 1, 'length': 0, 'width': 1},
-          {'height': 2, 'length': 1, 'width': 0},
-          {'height': 1, 'length': 3, 'width': 2}]
-vec.fit_transform(sample)
-print(vec.feature_names_)
-print(vec.transform(sample))
+#sample = [{'Word': 1, 'POS_Tag': 0, 'Chunk_Tag': 1},
+#          {'Word': 2, 'POS_Tag': 1, 'Chunk_Tag': 0},
+#          {'Word': 1, 'POS_Tag': 3, 'Chunk_Tag': 2}]
+#vec.fit_transform(sample)
+#print(vec.feature_names_)
+#print(vec.transform(sample))
+
 for token in tokens:
+    # Ignore empty tokens
+    if not token:
+        continue
     # print("Token:", token)
     features += [ {'word': token[0], 'pos': token[1], 'chunk': token[2]} ]
-print("Features:", features)
+
+# print("Features:", features)
+
+vec.fit_transform(features)
+print(vec.feature_names_)
+# print(vec.transform(features))
+print("Features extracted successfully.")
 
